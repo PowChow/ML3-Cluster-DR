@@ -44,14 +44,6 @@ pca$score
 # predict(news_pca, 
 #         newdata=tail(news.scaled, 2))
 
-#Plot results -- Does not work for first round of dimensionality reduction
-# g <- ggbiplot(news_prpca, obs.scale = 1, var.scale = 1, 
-#               groups = news_shares5_labels, ellipse = TRUE, 
-#               circle = TRUE)
-# g <- g + scale_color_discrete(name = '')
-# g <- g + theme(legend.direction = 'horizontal', 
-#                legend.position = 'top')
-# print(g)
 ###################################
 #OUTPUT TO FILE FOR CLUSTERING AND NN
 news_keep1 = data.frame(news_pca$scores[,1:25])
